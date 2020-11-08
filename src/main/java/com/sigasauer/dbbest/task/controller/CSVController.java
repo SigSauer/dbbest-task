@@ -66,7 +66,8 @@ public class CSVController {
     }
 
     public void write(List<Integer> distances, List<Point> points) {
-        String dir = pipelineFilename.substring(0,pipelineFilename.lastIndexOf("\\"));
+        String dir = pipelineFilename.substring(0, pipelineFilename.contains("\\") ?
+                pipelineFilename.lastIndexOf("\\") : pipelineFilename.lastIndexOf("/"));
         try {
             File resFile = new File(dir,"result.csv");
             FileWriter fw = new FileWriter(resFile,true);
