@@ -3,7 +3,11 @@ Water Pipeline System (CLI version)
 Water Pipeline System implements an algorithm for finding the optimal path (route)
 between points to improve the efficiency of the water supply system. The method of
 calculating the shortest path is based on Dijkstra's algorithm by representing water
-pipes as edges of a graph, and points as vertices of a graph.
+pipes as edges of a graph, and points as vertices of a graph. When calculating a 
+route between non-adjacent points, all possible routes through other points are 
+calculated and compared. If the computed path is shorter than the current path, it 
+becomes optimal. So, if a path exists, the algorithm will find the shortest path 
+between arbitrary points.
 
 
 User Guide
@@ -21,7 +25,10 @@ program, the calculation results are saved in a file.
 Программное обеспечение систмеы водопровода реализует алгоритм поиска оптимального пути
 между пунктами для повышения эфективности работы системы водопровода. Метод вычесления найменьшего
 пути осуществляется на основе алгоритма Дейкстры за счет представления водопроводных труб как ребер
-граф, а точек - как вершин графа.
+граф, а точек - как вершин графа. При вычислении маршрута между не соседними точками, вычисляются  
+и сравниваются все возможные маршруты через другие точки. Если вычисленный путь короче, чем текущий, 
+он становится оптимальным. Итого, если путь существует, алгоритм найдет самый короткий путь между 
+произвольными точками.
 
 Руководство пользователя
 Для работы программы, необходимо загрузить два файла формата ".csv": первый файл содержит информацию
